@@ -1,0 +1,16 @@
+<%= simple_form_for(@caixa) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :nome %>
+    <%= f.input :descricao %>
+
+        <h4>Item</h4>
+        <%= f.nested_fields_for :items, @caixa.items.build do |item| %>
+            <%= item.remove_nested_fields_link %>
+            <%= item.label :Tipo %>
+            <%= item.text_field :tipo %>
+            <%= item.label :Conteudo %>
+            <%= item.text_field :conteudo %>   
+        <% end %>
+        <%= f.add_nested_fields_link :items %>
+<%= f.button :submit %>
+<% end %>
