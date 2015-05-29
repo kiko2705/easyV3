@@ -33,7 +33,7 @@ EasyOpenSource::Application.routes.draw do
   get 'qualificacaos/resources_available'  => 'qualificacaos#resources_available', as: :resources_available
   #get 'search_novatos'  => 'qualificacaos#search', as: :search_novatos_qualificacaos
 
-  get 'pagina_projeto'  => 'projetos#pagina_projeto', as: :paginas_projeto
+  get 'pagina_projeto'  => 'projetos#pagina_projeto', as: :pagina_projeto
   get 'projetos/index'  => 'projetos#index', as: :projetos_path
   get 'projetos/search' => 'projetos#search', as: :projetos_search
   #get 'projetos/lista'  => 'projetos#lista_projetos', as: :projetos_lista
